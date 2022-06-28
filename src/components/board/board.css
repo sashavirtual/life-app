@@ -1,0 +1,19 @@
+.nullCell {
+    background-color: rgb(55, 0, 60);
+    width: var(--params);
+    height: var(--params);
+    cursor: pointer;
+    transition: 1.5s;
+    border-radius: 10%;
+}
+
+.board {
+    display: flex;
+    /* width: 500px;
+    height: 500px;
+    min-width: 500px;
+    max-width: 500px; */
+    flex-wrap: wrap;
+    background-color: rgb(55, 0, 60);
+
+}

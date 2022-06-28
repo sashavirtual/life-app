@@ -1,0 +1,77 @@
+.WH__form {
+    max-width: 1000px;
+    min-width: 60vw;
+    max-height: 1000px;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    margin: 15px;
+    border-radius: 50px;
+    background: linear-gradient(179deg, rgba(0, 188, 212, 1) 21%, rgba(238, 130, 238, 1) 100%);
+    box-shadow: 3px 2px 10px 10px rgba(87, 87, 87, 0.249);
+    transition: 4s;
+}
+
+.WH__heading {
+    font-size: 35px;
+    margin: 15px 0 5px 0;
+    font-weight: 300;
+}
+
+.WH__paragraph {
+    font-size: 24px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.WH__input {
+    margin-bottom: 15px;
+    height: 30px;
+    padding: 5px;
+    min-width: 200px;
+    max-width: 30vw;
+    min-height: 40px;
+    max-height: 10vw;
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.WH__input:after {
+    content: '';
+    position: relative;
+    font-size: 144px;
+    color: black;
+    width: 100px;
+    height: 100px;
+}
+
+.WH__submit {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgb(164, 164, 255);
+    cursor: pointer;
+    width: 80px;
+    font-weight: 600;
+}
+
+@media screen and (max-width:500px) {
+
+    .WH__input {
+        font-size: 18px;
+    }
+
+    .WH__paragraph {
+        font-size: 22px;
+    }
+
+    .WH__heading {
+        font-size: 28px;
+    }
+}

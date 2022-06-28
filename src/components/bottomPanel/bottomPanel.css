@@ -1,0 +1,233 @@
+.bottomPanel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.colorBox {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    /* grid-remplate-columns: auto, 4; */
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 40vw;
+}
+
+.bottomPanel__rightPart {
+    width: 40vw;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bottomPanel__rightPart-speed {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5vmax;
+    margin-right: 1.5vmax
+}
+
+.bottomPanel__rightPart-speed img {
+    height: 5vmax;
+    outline: none;
+    border: none;
+    margin: 0.5vmax 0;
+    cursor: pointer;
+    margin-right: 2vmax;
+    border: 1px solid grey;
+    background-color: rgba(255, 255, 255, 0.656);
+    padding: 5px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    transition: 0.3s;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.bottomPanel__rightPart-speed img:hover {
+    background-color: rgba(255, 255, 255, 0.825);
+    transform: translateY(-3px)
+}
+
+.bottomPanel__rightPart-speed #buttonSpeed-3 {
+    margin-right: 0;
+}
+
+
+.bottomPanel__rightPart-buttonPanel {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: linear-gradient(90deg, rgba(116, 255, 238, 1) 0%, rgba(101, 255, 54, 1) 100%);
+    border-radius: 15px;
+    max-height: 80px;
+}
+
+.colors {
+    width: 4vmax;
+    height: 4vmax;
+    background-color: white;
+    z-index: 101;
+    border: 1px dashed rgb(96, 96, 96);
+    margin: 2px;
+    cursor: pointer;
+    transition: 0.1s;
+    border-radius: 100%;
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.chosenColor {
+    border: 0.2rem solid rgb(255, 255, 255);
+    animation-name: chosen;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    box-shadow: 0 0 5px 4px rgba(255, 255, 255, 0.564);
+}
+
+
+.bottomPanel__button {
+    z-index: 1;
+    border: 1px solid rgb(35, 35, 35);
+    border-left: 0px;
+    padding: 1.5vmax;
+    font-size: 1.5vmax;
+    cursor: pointer;
+    transition: 0.2s;
+    outline: none;
+    max-height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.bottomPanel__button-start {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #85ffda00;
+    max-height: 80px;
+}
+
+.bottomPanel__button-params {
+    border: 1px solid rgb(35, 35, 35);
+    padding: 1.5vmax;
+    font-size: 1.4vmax;
+    background-color: #85f5ff00;
+    z-index: 100;
+    cursor: pointer;
+    transition: 0.2s;
+    border-right: 0px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    max-height: 80px;
+    padding-right: 2.4vmax;
+
+}
+
+.bottomPanel__button-start:disabled {
+    color: black;
+}
+
+.bottomPanel__button-params:hover {
+    background-color: rgb(116, 255, 190);
+
+}
+
+.bottomPanel__button-start:hover {
+    background-color: #65ff65;
+}
+
+@keyframes chosen {
+    0% {
+        border: 0.2rem solid rgb(255, 255, 255);
+    }
+
+    50% {
+        border: 0.2rem solid rgb(125, 125, 125);
+    }
+
+    100% {
+        border: 0.2rem solid rgb(255, 255, 255);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .bottomPanel {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .bottomPanel__rightPart {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+.colors:hover {
+    transform: scale(1.1)
+}
+
+.brightRed {
+    background-color: red;
+}
+
+.yellow {
+    background-color: #FBCB0A
+}
+
+.lightGreen {
+    background-color: #00FFAB
+}
+
+.crab {
+    background-color: #FD5D5D
+}
+
+.lightBlue {
+    background-color: #B8FFF9
+}
+
+.yellow {
+    /* background-color: #FFF56D; */
+}
+
+.green {
+    background-color: #43ab45;
+    animation: breathing;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.orange {
+    background-color: #fb8600;
+
+}
+
+.pink {
+    background-color: #e67bfb;
+
+}
+
+.white {
+    background-color: #f9f9f9;
+
+}
+
+.blue {
+    background-color: #2F86A6;
+}
+
+.crimson {
+    background-color: #9C0F48;
+}
+
+.black {
+    background-color: #000000;
+
+}
