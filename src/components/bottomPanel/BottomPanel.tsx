@@ -6,6 +6,7 @@ import speed3 from './speedButtons/speed3.png'
 import pause from './speedButtons/pause.png'
 
 const BottomPanel = ({ setCurrentColor, rect, currentColor, chosenCells, setChosenCells }: any) => {
+    const [paused, setPaused] = useState(false)
     let colorButtons: string[] = ['crimson', 'brightRed', 'crab', 'orange', 'yellow', 'green', 'lightGreen', 'blue', 'pink', 'lightBlue', 'white', 'black']
     let previousSpeed = rect[0] * rect[1] >= 2500 ? 3 : rect[0] * rect[1] >= 625 ? 2 : 1
     const changeColor = (e: any) => {
@@ -68,19 +69,21 @@ const BottomPanel = ({ setCurrentColor, rect, currentColor, chosenCells, setChos
         int = setInterval(start, prevArr[previousSpeed])
     }
     const stopLife = () => {
+        setPaused(false)
         let lifeStart = document.getElementById('lifeStart')
         lifeStart?.removeAttribute('disabled')
         clearInterval(int)
 
     }
     const setSpeed = (speed: number) => {
-        if (speed === 1 && previousSpeed > 1) {
+        setPaused(true)
+        if (speed === 1) {
             clearInterval(int)
             clearInterval(int2)
             clearInterval(int3)
             int = setInterval(start, 35)
             previousSpeed = 1
-        } else if (speed === 2 && previousSpeed > 2) {
+        } else if (speed === 2) {
             clearInterval(int)
             clearInterval(int2)
             clearInterval(int3)
@@ -104,8 +107,11 @@ const BottomPanel = ({ setCurrentColor, rect, currentColor, chosenCells, setChos
             </div>
             <div className='bottomPanel__rightPart'>
                 <div className="bottomPanel__rightPart-speed">
-                    <img src={pause} alt='speed1' onClick={() => stopLife()} id="buttonSpeed-1" />
-                    <img src={speed1} alt='speed1' onClick={() => setSpeed(1)} id="buttonSpeed-1" />
+                    {paused ?
+                        <img src={pause} alt='speed1' onClick={() => stopLife()} id="buttonSpeed-1" />
+                        :
+                        <img src={speed1} alt='speed1' onClick={() => setSpeed(1)} id="buttonSpeed-1" />
+                    }
                     <img src={speed2} alt='speed2' onClick={() => setSpeed(2)} id="buttonSpeed-2" />
                     <img src={speed3} alt='speed3' onClick={() => setSpeed(3)} id="buttonSpeed-3" />
                 </div>
