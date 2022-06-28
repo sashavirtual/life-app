@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/life-app/static/css/main.fef3557e.css",
-    "main.js": "/life-app/static/js/main.dd06a7fc.js",
+    "main.js": "/life-app/static/js/main.c36a06c3.js",
     "index.html": "/life-app/index.html",
     "main.fef3557e.css.map": "/life-app/static/css/main.fef3557e.css.map",
-    "main.dd06a7fc.js.map": "/life-app/static/js/main.dd06a7fc.js.map"
+    "main.c36a06c3.js.map": "/life-app/static/js/main.c36a06c3.js.map"
   },
   "entrypoints": [
     "static/css/main.fef3557e.css",
-    "static/js/main.dd06a7fc.js"
+    "static/js/main.c36a06c3.js"
   ]
 }
