@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/life-app/static/css/main.fef3557e.css",
+    "main.js": "/life-app/static/js/main.dd06a7fc.js",
+    "index.html": "/life-app/index.html",
+    "main.fef3557e.css.map": "/life-app/static/css/main.fef3557e.css.map",
+    "main.dd06a7fc.js.map": "/life-app/static/js/main.dd06a7fc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fef3557e.css",
+    "static/js/main.dd06a7fc.js"
+  ]
+}
