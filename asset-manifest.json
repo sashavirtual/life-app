@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/life-app/static/css/main.2bef2daa.css",
-    "main.js": "/life-app/static/js/main.0dbfaae9.js",
+    "main.css": "/life-app/static/css/main.7baf9dcb.css",
+    "main.js": "/life-app/static/js/main.e7e064dd.js",
     "static/media/question.png": "/life-app/static/media/question.e99016679957740cc02d.png",
     "index.html": "/life-app/index.html",
-    "main.2bef2daa.css.map": "/life-app/static/css/main.2bef2daa.css.map",
-    "main.0dbfaae9.js.map": "/life-app/static/js/main.0dbfaae9.js.map"
+    "main.7baf9dcb.css.map": "/life-app/static/css/main.7baf9dcb.css.map",
+    "main.e7e064dd.js.map": "/life-app/static/js/main.e7e064dd.js.map"
   },
   "entrypoints": [
-    "static/css/main.2bef2daa.css",
-    "static/js/main.0dbfaae9.js"
+    "static/css/main.7baf9dcb.css",
+    "static/js/main.e7e064dd.js"
   ]
 }
