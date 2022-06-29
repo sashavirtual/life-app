@@ -16,6 +16,32 @@
     transition: 4s;
 }
 
+.WH__form-howToPlay {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 2vmax;
+    max-width: 200px;
+    margin: 0 auto;
+    border-radius: 30px;
+    transition: 2s;
+}
+
+.WH__form-howToPlay:hover {
+    background-color: rgba(255, 255, 255, 0.799);
+}
+
+.WH__questionMark {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 10px;
+}
+
+
 .WH__heading {
     font-size: 35px;
     margin: 15px 0 5px 0;

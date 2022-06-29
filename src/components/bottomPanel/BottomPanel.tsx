@@ -6,7 +6,6 @@ import speed3 from './speedButtons/speed3.png'
 import pause from './speedButtons/pause.png'
 
 const BottomPanel = ({ setCurrentColor, rect, currentColor, chosenCells, setChosenCells }: any) => {
-    const [paused, setPaused] = useState(false)
     let colorButtons: string[] = ['crimson', 'brightRed', 'crab', 'orange', 'yellow', 'green', 'lightGreen', 'blue', 'pink', 'lightBlue', 'white', 'black']
     let previousSpeed = rect[0] * rect[1] >= 2500 ? 3 : rect[0] * rect[1] >= 625 ? 2 : 1
     const changeColor = (e: any) => {
@@ -17,8 +16,6 @@ const BottomPanel = ({ setCurrentColor, rect, currentColor, chosenCells, setChos
     }
     const setNewParams = () => {
         clearInterval(int)
-        clearInterval(int2)
-        clearInterval(int3)
         let lifeStart = document.getElementById('lifeStart')
         lifeStart?.removeAttribute('disabled')
         let form: HTMLElement | null = document.querySelector('.WH__form') //534/12*10/20
@@ -60,7 +57,7 @@ const BottomPanel = ({ setCurrentColor, rect, currentColor, chosenCells, setChos
         }
 
     }
-    let int: NodeJS.Timer, int2: NodeJS.Timer, int3: NodeJS.Timer
+    let int: NodeJS.Timer
     const startLife = () => {
         setChosenCells((prev: number[]) => prev.sort(() => Math.random() - 0.5))
         let lifeStart = document.getElementById('lifeStart')
@@ -68,34 +65,37 @@ const BottomPanel = ({ setCurrentColor, rect, currentColor, chosenCells, setChos
         let prevArr = [100, 35, 8, 1]
         int = setInterval(start, prevArr[previousSpeed])
     }
-    const stopLife = () => {
-        setPaused(false)
-        let lifeStart = document.getElementById('lifeStart')
-        lifeStart?.removeAttribute('disabled')
-        clearInterval(int)
 
-    }
-    const setSpeed = (speed: number) => {
-        setPaused(true)
-        if (speed === 1) {
+    const setSpeed = (speed: number, e: React.MouseEvent<Element, MouseEvent>) => {
+        let ids = [0, 1, 2, 3]
+        if (speed === 0) {
             clearInterval(int)
-            clearInterval(int2)
-            clearInterval(int3)
+            let lifeStart = document.getElementById('lifeStart')
+            lifeStart?.removeAttribute('disabled')
+        }
+        else if (speed === 1) {
+            clearInterval(int)
             int = setInterval(start, 35)
             previousSpeed = 1
         } else if (speed === 2) {
             clearInterval(int)
-            clearInterval(int2)
-            clearInterval(int3)
             int = setInterval(start, 8)
             previousSpeed = 2
         } else if (speed === 3) {
             clearInterval(int)
-            clearInterval(int2)
-            clearInterval(int3)
-            int = setInterval(start, 1)
+            int = setInterval(start, 5)
             previousSpeed = 3
         }
+        ids.map((item, index) => index !== speed ?
+            document.querySelector("#buttonSpeed-" + String(index))?.classList.remove('speedActivatedGreen', 'speedActivatedRed')
+            :
+            document.querySelector("#buttonSpeed-" + String(index))?.classList.add('speedActivatedGreen')
+        )
+        speed === 0
+            &&
+            document.querySelector("#buttonSpeed-0")?.classList.add('speedActivatedRed')
+            &&
+            document.querySelector("#buttonSpeed-0")?.classList.remove('speedActivatedGreen')
     }
     // document.querySelector('.bottomPanel__button-start')?.addEventListener('click', startLife)
     return (
@@ -107,13 +107,10 @@ const BottomPanel = ({ setCurrentColor, rect, currentColor, chosenCells, setChos
             </div>
             <div className='bottomPanel__rightPart'>
                 <div className="bottomPanel__rightPart-speed">
-                    {paused ?
-                        <img src={pause} alt='speed1' onClick={() => stopLife()} id="buttonSpeed-1" />
-                        :
-                        <img src={speed1} alt='speed1' onClick={() => setSpeed(1)} id="buttonSpeed-1" />
-                    }
-                    <img src={speed2} alt='speed2' onClick={() => setSpeed(2)} id="buttonSpeed-2" />
-                    <img src={speed3} alt='speed3' onClick={() => setSpeed(3)} id="buttonSpeed-3" />
+                    <img src={pause} className="speedActivatedRed" alt='pause' onClick={(e) => setSpeed(0, e)} id="buttonSpeed-0" />
+                    <img src={speed1} alt='speed1' onClick={(e) => setSpeed(1, e)} id="buttonSpeed-1" />
+                    <img src={speed2} alt='speed2' onClick={(e) => setSpeed(2, e)} id="buttonSpeed-2" />
+                    <img src={speed3} alt='speed3' onClick={(e) => setSpeed(3, e)} id="buttonSpeed-3" />
                 </div>
             </div>
             <div className="bottomPanel__rightPart-buttonPanel">

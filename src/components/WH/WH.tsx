@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './WH.css';
-
+import question from './style/question.png'
 function WH({ sendData }: any) {
     const [width, setWidth] = useState(0)
     const [height, setHeight] = useState(0)
@@ -18,6 +18,10 @@ function WH({ sendData }: any) {
     }
     return (
         <div>
+            <div className='WH__form-howToPlay'>
+                <img className="WH__questionMark" alt="question mark" src={question} />
+                <p>how to play?</p>
+            </div>
             <form className='WH__form'>
                 <h1 className='WH__heading'>Width</h1>
                 <input className='WH__input' id="width" placeholder='width...' onChange={changeWH} />
