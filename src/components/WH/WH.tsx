@@ -16,13 +16,16 @@ function WH({ sendData }: any) {
         }
         e.target.id === 'width' ? setWidth(e.target.value) : setHeight(e.target.value)
     }
+    const handleClick = () => {
+
+    }
     return (
         <div>
-            <div className='WH__form-howToPlay'>
-                <img className="WH__questionMark" alt="question mark" src={question} />
-                <p>how to play?</p>
-            </div>
             <form className='WH__form'>
+                <div className='WH__form-howToPlay' onClick={handleClick}>
+                    <img className="WH__questionMark" alt="question mark" src={question} />
+                    <p>how to play?</p>
+                </div>
                 <h1 className='WH__heading'>Width</h1>
                 <input className='WH__input' id="width" placeholder='width...' onChange={changeWH} />
                 <h1 className='WH__heading'>Height</h1>

@@ -14,7 +14,7 @@ const Board = ({ rect, setChosenCells, currentColor, chosenCells }: any) => {
         e.target?.classList.add(currentColor)
         let hyphenInd = id.indexOf('-')
         let widthHeight = [Number(id.slice(2, hyphenInd)), Number(id.slice(hyphenInd + 1))]
-        setChosenCells((prev: any) => [...prev, [widthHeight]])
+        setChosenCells((prev: any) => [...prev, [widthHeight]].sort(() => Math.random() - 0.5))
     }
     let board = new Array(rect[0] * rect[1]).fill(null)
     return (

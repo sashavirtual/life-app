@@ -114,8 +114,7 @@ const BottomPanel = ({ setCurrentColor, rect, currentColor, chosenCells, setChos
                 </div>
             </div>
             <div className="bottomPanel__rightPart-buttonPanel">
-                <button className='bottomPanel__button bottomPanel__button-params' onClick={setNewParams}>Set new parameters</button>
-                <button id='lifeStart' className='bottomPanel__button bottomPanel__button-start' onClick={() => startLife()}>Start living!</button>
+                <button className='bottomPanel__button' onClick={setNewParams}>Set new parameters</button>
             </div>
         </div>
     )
