@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "/life-app/static/css/main.7baf9dcb.css",
-    "main.js": "/life-app/static/js/main.e7e064dd.js",
+    "main.css": "/life-app/static/css/main.a8531c31.css",
+    "main.js": "/life-app/static/js/main.264f7339.js",
+    "static/media/howToPlay3.png": "/life-app/static/media/howToPlay3.f98e0fd951a0750a530b.png",
+    "static/media/howToPlay2.png": "/life-app/static/media/howToPlay2.822b529e05e663a91324.png",
+    "static/media/howToPlay1.png": "/life-app/static/media/howToPlay1.d8be83e18cc01c9d051d.png",
     "static/media/question.png": "/life-app/static/media/question.e99016679957740cc02d.png",
     "index.html": "/life-app/index.html",
-    "main.7baf9dcb.css.map": "/life-app/static/css/main.7baf9dcb.css.map",
-    "main.e7e064dd.js.map": "/life-app/static/js/main.e7e064dd.js.map"
+    "main.a8531c31.css.map": "/life-app/static/css/main.a8531c31.css.map",
+    "main.264f7339.js.map": "/life-app/static/js/main.264f7339.js.map"
   },
   "entrypoints": [
-    "static/css/main.7baf9dcb.css",
-    "static/js/main.e7e064dd.js"
+    "static/css/main.a8531c31.css",
+    "static/js/main.264f7339.js"
   ]
 }
