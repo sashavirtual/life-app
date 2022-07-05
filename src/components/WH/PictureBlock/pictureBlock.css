@@ -1,0 +1,32 @@
+.WH__pictureBlock-pic {
+    width: 55vw;
+    min-width: 500px;
+    display: block;
+    transition: 0.2s;
+    aspect-ratio: 4/3;
+    border-radius: 7vw;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10vh;
+    margin: 0 auto;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.664);
+    box-shadow: 2vw 2vw 10vw 2vw rgba(0, 0, 0, 0.334);
+}
+
+.WH__pictureBlock {
+    z-index: 250;
+}
+
+.WH__pictureBlock-pic:hover {
+    cursor: pointer;
+
+}
+
+@media screen and (max-width:850px) {
+    .WH__pictureBlock-pic {
+        width: 65vw;
+        min-width: 350px;
+    }
+}

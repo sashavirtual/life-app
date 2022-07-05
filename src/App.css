@@ -17,9 +17,9 @@ body {
   padding: 0 5vmax;
   background: radial-gradient(circle at 0% 100%, rgba(6, 40, 61, 1) 0%, rgba(19, 99, 223, 1) 32%, rgba(71, 181, 255, 1) 66%, rgba(223, 246, 255, 1) 100%) no-repeat;
   background-size: cover;
-  height: 4000px;
+  max-height: 1200px;
   width: 4000px;
-  max-height: 110vh;
+  min-height: 100vh;
   max-width: 100vw;
   display: flex;
   align-items: center;

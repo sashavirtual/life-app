@@ -3,7 +3,7 @@
     width: var(--params);
     height: var(--params);
     cursor: pointer;
-    transition: 1.5s;
+    transition: 0.8s;
     border-radius: 10%;
     box-shadow: inset 1px 0.3px 1px 1px #ffffff;
 

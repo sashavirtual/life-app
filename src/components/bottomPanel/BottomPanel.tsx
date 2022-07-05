@@ -30,6 +30,7 @@ const BottomPanel = ({ setCurrentColor, rect, currentColor, chosenCells, setChos
     let chosenLength = chosenCells.length
     let count = 0
     const start = () => {
+        console.log('rerender')
         let w: number, h: number
         if (count < chosenLength) {
             w = chosenCells[count][0][0]
@@ -97,7 +98,6 @@ const BottomPanel = ({ setCurrentColor, rect, currentColor, chosenCells, setChos
             &&
             document.querySelector("#buttonSpeed-0")?.classList.remove('speedActivatedGreen')
     }
-    // document.querySelector('.bottomPanel__button-start')?.addEventListener('click', startLife)
     return (
         <div className="bottomPanel">
             <div className='colorBox'>

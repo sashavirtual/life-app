@@ -39,10 +39,10 @@ const App = () => {
     // let cellParams2 = w < h ? Math.floor(scw / Number(max) * 10) / 12 : Math.floor(sch / Number(max) * 10) / 12
     setRect([Number(w), Number(h)])
     if (Number(w) * cellParams >= window.innerWidth * 0.9) {
-      cellParams = window.innerWidth / Number(w) * 0.9
+      cellParams = window.innerWidth / Number(w) * 0.8
     }
     if (Number(h) * cellParams >= window.innerHeight * 0.9) {
-      cellParams = window.innerHeight / Number(h) * 0.9
+      cellParams = window.innerHeight / Number(h) * 0.8
     }
     if (el) {
       el.setAttribute("style", `--params:${cellParams}px`)

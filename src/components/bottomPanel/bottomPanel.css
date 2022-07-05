@@ -100,7 +100,7 @@
     width: 4vmax;
     height: 4vmax;
     background-color: white;
-    z-index: 101;
+    z-index: 55;
     border: 1px dashed rgb(96, 96, 96);
     margin: 2px;
     cursor: pointer;
